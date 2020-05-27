@@ -6,17 +6,17 @@
 # FIRST TIME
 -------------------------------------------
 
-# make dotfiles '.CFG' folder
+# make dotfiles '.cfg' folder
 
-mkdir ~/.CFG
+mkdir ~/.cfg
 
-git init --bare $HOME/.CFG
+git init --bare $HOME/.cfg
 
-alias config='/usr/bin/git --git-dir=$HOME/.CFG/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 config config --local status.showUntrackedFiles no
 
-echo "alias config='/usr/bin/git --git-dir=$HOME/.CFG/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
 
 -------------------------------------------
 # ADD
@@ -33,15 +33,15 @@ NEVER config commit -a /!\
 -------------------------------------------
 # NEW SYTEM
 -------------------------------------------
-mkdir ~/.CFG
+mkdir ~/.cfg
 
-alias config='/usr/bin/git --git-dir=$HOME/.CFG/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-echo ".CFG" >> .gitignore
+echo ".cfg" >> .gitignore
 
-git clone --bare https://github.com/lavomatyc/CONFIG $HOME/.CFG
+git clone --bare https://github.com/lavomatyc/config $HOME/.cfg
 
-mkdir -p .config-backup && \
+/!\ do not use ---- mkdir -p .config-backup && \
 config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
 
