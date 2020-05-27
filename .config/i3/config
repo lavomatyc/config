@@ -1,0 +1,191 @@
+#MANJARO i3
+
+#----DEFINITIONS----
+
+set $mod Mod4
+
+set $ws1 1:
+set $ws2 2: 
+set $ws3 3:
+set $ws4 4:
+set $ws5 5:
+set $ws6 6:
+set $ws7 7:
+set $ws8 8:
+set $ws9 9:
+set $ws10 10:
+
+set $term urxvt
+
+#----APPEARANCE----
+# keep before bar
+#font pango:monospace 8
+#font pango:DejaVu Sans Mono 9
+font pango:System San Francisco Display Regular 9
+
+#----TEMP----
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+#----SYSTEM----
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exit
+# sleep
+bindsym $mod+Shift+s exec systemctl suspend
+# poweroff
+bindsym $mod+Shift+p exec systemctl poweroff
+
+#----INTRAWS----
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+Ctrl+Right split h
+bindsym $mod+Ctrl+h split h
+# split in vertical orientation
+bindsym $mod+Ctrl+Down split v
+bindsym $mod+Ctrl+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+z layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+# focus the parent container
+bindsym $mod+a focus parent
+# focus the child container
+bindsym $mod+c focus child
+
+# RESIZE
+bindsym $mod+y resize shrink width 10 px
+bindsym $mod+u resize grow height 10 px
+bindsym $mod+i resize shrink height 10 px
+bindsym $mod+o resize grow width 10 px
+
+#----AUTOLAUNCH----
+
+# LAUNCH ON STARTUP
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+#exec --no-startup-id blueman-manager
+exec --no-startup-id flameshot
+#exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper1.jpg
+exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper2.jpg
+#exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper3.jpg
+#exec_always nordvpn c
+
+#----PROGRAMS----
+
+# UTILITIES SHORTCUTS
+bindsym $mod+w exec rofi -show run
+bindsym $mod+Shift+w exec rofi -show window
+bindsym $mod+d exec dmenu_run
+bindsym $mod+g exec firefox
+bindsym $mod+Return exec $term
+
+# FONCTION KEYS
+bindsym $mod+F1 exec thunar
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec zotero
+bindsym $mod+F4 exec thunar ~/Data/EtudesB/PDF
+#bindsym $mod+F5 exec
+bindsym $mod+F6 exec firefox https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=NEW-AW-PROS-Branded-Search-FR-FRA_._ci__._sl_FRA_._vi__._sd_All_._la_FR_._&tabei=7&utm_term=_._ag_52142199346_._ad_254041601034_._de_c_._dm__._pl__._ti_kwd-310556426868_._li_9055272_._pd__._&gclid=EAIaIQobChMInaKembjw6AIVxMjeCh2nhA0qEAAYASAAEgKoTfD_BwE
+#bindsym $mod+F7 exec
+bindsym $mod+F8 exec /usr/bin/tor-browser
+bindsym $mod+F9 exec nordvpn c
+bindsym $mod+Shift+F9 exec nordvpn d
+bindsym $mod+F10 exec lollypop
+bindsym $mod+F12 exec mousepad ~/.config/i3/config
+
+#---WORKSPACES----
+
+# switch to workspace
+bindsym $mod+ampersand workspace number $ws1
+bindsym $mod+eacute workspace number $ws2
+bindsym $mod+quotedbl workspace number $ws3
+bindsym $mod+apostrophe workspace number $ws4
+bindsym $mod+parenleft workspace number $ws5
+bindsym $mod+minus workspace number $ws6
+bindsym $mod+egrave workspace number $ws7
+bindsym $mod+underscore workspace number $ws8
+bindsym $mod+ccedilla workspace number $ws9
+bindsym $mod+agrave workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+ampersand move container to workspace number $ws1
+bindsym $mod+Shift+eacute move container to workspace number $ws2
+bindsym $mod+Shift+quotedbl move container to workspace number $ws3
+bindsym $mod+Shift+apostrophe move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+minus move container to workspace number $ws6
+bindsym $mod+Shift+egrave move container to workspace number $ws7
+bindsym $mod+Shift+underscore move container to workspace number $ws8
+bindsym $mod+Shift+ccedilla move container to workspace number $ws9
+bindsym $mod+Shift+agrave move container to workspace number $ws10
+
+#navigate between workspaces
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace next
+
+#SCRATCHPAD
+bindsym $mod+Shift+n move scratchpad
+bindsym $mod+n scratchpad show
+
+#----BAR----
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+status_command i3status
+position top
+}
+
+
