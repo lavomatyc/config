@@ -1,3 +1,6 @@
+"MAPPING
+nnoremap zz :update<CR>
+
 "TABS
 set tabstop=4 "show
 set softtabstop=4 "write
@@ -22,5 +25,5 @@ Plug 'jiangmiao/auto-pairs' "auto pair inserter + ligne
 call plug#end()
 
 "LATEX
-map jk :! pdflatex %<CR><CR>
-map kj :! mupdf $(echo % \|sed 's/tex$/pdf/') & disown<CR><CR>
+nnoremap & :! pdflatex %<CR><CR>
+"map kj :! mupdf $(echo % \|sed 's/tex$/pdf/') & disown<CR><CR>
