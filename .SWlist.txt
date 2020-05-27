@@ -1,0 +1,14 @@
+Python/anaconda
+
+PACMAN
+beets \
+nvidia \
+rawtherapee \
+qbittorrent \
+telegram-desktop \
+calibre \
+gimp \
+texlive-most
+
+AUR
+soulseeqt
