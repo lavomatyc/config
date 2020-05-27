@@ -8,11 +8,13 @@ anki \
 beets \
 volumeicon \
 ranger \
-vifm \
+evince \
 blueman \
 flameshot \
 feh \
 rofi \
 rxvt-unicode \
 mupdf
-yay -S soulseekqt
+
+yay -S soulseekqt \
+zotero
