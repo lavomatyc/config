@@ -26,4 +26,4 @@ call plug#end()
 
 "LATEX
 nnoremap & :! pdflatex %<CR><CR>
-"map kj :! mupdf $(echo % \|sed 's/tex$/pdf/') & disown<CR><CR>
+nnoremap <F1> :! evince $(echo % \|sed 's/tex$/pdf/') & disown<CR><CR>
