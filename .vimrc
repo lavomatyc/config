@@ -25,5 +25,5 @@ Plug 'jiangmiao/auto-pairs' "auto pair inserter + ligne
 call plug#end()
 
 "LATEX
-nnoremap & :! pdflatex %<CR><CR>
+nnoremap & :update<CR> :!pdflatex %<CR><CR><CR>
 nnoremap <F1> :! evince $(echo % \|sed 's/tex$/pdf/') & disown<CR><CR>
