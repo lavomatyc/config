@@ -56,7 +56,7 @@ bindsym $mod+Shift+p exec systemctl poweroff
 floating_modifier $mod
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+h focus left
