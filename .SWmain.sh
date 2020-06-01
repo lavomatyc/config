@@ -14,7 +14,9 @@ flameshot \
 feh \
 rofi \
 rxvt-unicode \
-mupdf
+mupdf \
+pulseaudio-equalizer
 
 yay -S soulseekqt \
-zotero
+zotero \
+spotify
