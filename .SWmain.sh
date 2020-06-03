@@ -16,7 +16,8 @@ rofi \
 rxvt-unicode \
 mupdf \
 pulseaudio-equalizer \
-pavucontrol
+pavucontrol \
+vimb
 
 yay -S soulseekqt \
 zotero \
