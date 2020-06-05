@@ -94,9 +94,9 @@ bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+Backspace floating toggle
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Backspace focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 # focus the child container
@@ -131,6 +131,8 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+g exec firefox
 bindsym $mod+v exec vimb
 bindsym $mod+Return exec $term
+bindsym $mod+space exec $term
+bindsym $mod+Shift+space exec rofi -show run
 
 # FONCTION KEYS
 bindsym $mod+F1 exec thunar
