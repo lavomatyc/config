@@ -125,14 +125,14 @@ exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper2.jpg
 #----PROGRAMS----
 
 # UTILITIES SHORTCUTS
-bindsym $mod+w exec rofi -show run
 bindsym $mod+Shift+w exec rofi -show window
+bindsym $mod+w exec rofi -show run
 bindsym $mod+d exec dmenu_run
 bindsym $mod+g exec firefox
 bindsym $mod+v exec vimb
 bindsym $mod+Return exec $term
-bindsym $mod+space exec $term
-bindsym $mod+Shift+space exec rofi -show run
+bindsym $mod+space exec rofi -show run
+bindsym $mod+Shift+space exec $term
 
 # FONCTION KEYS
 bindsym $mod+F1 exec thunar
