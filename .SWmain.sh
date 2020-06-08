@@ -17,7 +17,8 @@ rxvt-unicode \
 mupdf \
 pulseaudio-equalizer \
 pavucontrol \
-vimb
+vimb \
+baobab
 
 yay -S soulseekqt \
 zotero \
