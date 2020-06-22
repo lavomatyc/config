@@ -145,7 +145,8 @@ bindsym $mod+F6 exec firefox https://www.udemy.com/?utm_source=adwords-brand&utm
 bindsym $mod+F8 exec /usr/bin/tor-browser
 bindsym $mod+F9 exec nordvpn c
 bindsym $mod+Shift+F9 exec nordvpn d
-bindsym $mod+F10 exec lollypop
+bindsym $mod+F10 exec systemctl start nxserver.service
+bindsym $mod+F11 exec /usr/NX/bin/nxplayer
 bindsym $mod+F12 exec mousepad ~/.config/i3/config
 
 #---WORKSPACES----
