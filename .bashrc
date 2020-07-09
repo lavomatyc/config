@@ -164,3 +164,4 @@ set -o vi
 
 #my aliases
 alias sync="bash /home/lavomatyc/.SYNC"
+alias datamount="bash /home/lavomatyc/.MOUNT"
