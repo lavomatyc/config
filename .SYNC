@@ -1,0 +1,3 @@
+mount UUID=2606044F06042283 /home/lavomatyc/SyncedData
+rsync -a --delete --progress /home/lavomatyc/PrimaryData/ /home/lavomatyc/SyncedData
+umount UUID=2606044F06042283

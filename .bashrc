@@ -161,3 +161,6 @@ alias cfgcommit='config commit -m'
 alias i3config="vim $HOME/.config/i3/config"
 
 set -o vi
+
+#my aliases
+alias sync="bash /home/lavomatyc/.SYNC"
