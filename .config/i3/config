@@ -121,6 +121,7 @@ exec --no-startup-id flameshot
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper2.jpg
 #exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper3.jpg
 #exec_always nordvpn c
+exec --no-startuo-id psensor
 
 #----PROGRAMS----
 
