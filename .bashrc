@@ -159,9 +159,8 @@ alias cfgadd='config add'
 alias cfgcommit='config commit -m'
 
 #OVERLEAF GIT
-alias overpull='cd /home/lavomatyc/Documents/ArticleOndansetron && git pull --no-rebase'
-alias vimzoph='vim /home/lavomatyc/Documents/ArticleOndansetron/ondansetron.tex'
-alias overpush='cd /home/lavomatyc/Documents/ArticleOndansetron && git add *.tex && git commit -m "local work" && git push origin master'
+alias ondansetron='cd /home/lavomatyc/Documents/ArticleOndansetron && git pull --no-rebase && vim ondansetron.tex'
+#alias overpush='cd /home/lavomatyc/Documents/ArticleOndansetron && git add *.tex && git commit -m "local work" && git push origin master'
 
 alias i3config="vim $HOME/.config/i3/config"
 
