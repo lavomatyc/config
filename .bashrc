@@ -157,12 +157,13 @@ unset __conda_setup
 alias config='/usr/bin/git --git-dir=/$HOME/.cfg/ --work-tree=/$HOME'
 alias cfgadd='config add'
 alias cfgcommit='config commit -m'
+alias cfg='config add && config commit -m "lenovo"'
+alias i3config='vim ~/.config/i3/config'
 
 #OVERLEAF GIT
 alias ondansetron='cd /home/lavomatyc/Documents/ArticleOndansetron && git pull --no-rebase && vim ondansetron.tex'
-#alias overpush='cd /home/lavomatyc/Documents/ArticleOndansetron && git add *.tex && git commit -m "local work" && git push origin master'
+alias overpush='cd /home/lavomatyc/Documents/ArticleOndansetron && git add *.tex && git commit -m "local work" && git push origin master'
 
-alias i3config="vim $HOME/.config/i3/config"
 
 set -o vi
 
