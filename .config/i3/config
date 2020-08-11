@@ -37,6 +37,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+#adjust brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
 #----SYSTEM----
 
 # reload the configuration file
@@ -121,7 +125,7 @@ exec --no-startup-id flameshot
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper2.jpg
 #exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper3.jpg
 #exec_always nordvpn c
-exec --no-startuo-id psensor
+exec --no-startup-id psensor
 
 #----PROGRAMS----
 
@@ -134,7 +138,7 @@ bindsym $mod+v exec vimb
 bindsym $mod+Return exec $term
 bindsym $mod+space exec rofi -show run
 bindsym $mod+Shift+space exec $term
-
+bindsym $mod+Shift+m exec vlc ~/Videos/mummi.MOV
 # FONCTION KEYS
 bindsym $mod+F1 exec thunar
 bindsym $mod+F2 exec firefox
