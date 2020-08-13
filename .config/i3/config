@@ -30,6 +30,8 @@ font pango:System San Francisco Display Regular 9
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+
+#--------MEDIA KEYS-------------------------------
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -53,6 +55,8 @@ bindsym $mod+Shift+e exit
 bindsym $mod+Shift+s exec systemctl suspend
 # poweroff
 bindsym $mod+Shift+p exec systemctl poweroff
+# lock
+bindsym $mod+Shift+v exec i3lock lock -i ~/Pictures/Wallpapers/wallpaper2.png --raw=1920x1080:rgb
 
 #----INTRAWS----
 
@@ -121,9 +125,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 #exec --no-startup-id blueman-manager
 exec --no-startup-id flameshot
-#exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper1.jpg
-exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper2.jpg
-#exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper3.jpg
+exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
 #exec_always nordvpn c
 exec --no-startup-id psensor
 
@@ -139,20 +141,12 @@ bindsym $mod+Return exec $term
 bindsym $mod+space exec rofi -show run
 bindsym $mod+Shift+space exec $term
 bindsym $mod+Shift+m exec vlc ~/Videos/mummi.MOV
+
 # FONCTION KEYS
-bindsym $mod+F1 exec thunar
-bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec zotero
-bindsym $mod+F4 exec thunar ~/Data/EtudesB/PDF
-#bindsym $mod+F5 exec
-bindsym $mod+F6 exec firefox https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=NEW-AW-PROS-Branded-Search-FR-FRA_._ci__._sl_FRA_._vi__._sd_All_._la_FR_._&tabei=7&utm_term=_._ag_52142199346_._ad_254041601034_._de_c_._dm__._pl__._ti_kwd-310556426868_._li_9055272_._pd__._&gclid=EAIaIQobChMInaKembjw6AIVxMjeCh2nhA0qEAAYASAAEgKoTfD_BwE
 #bindsym $mod+F7 exec
-bindsym $mod+F8 exec /usr/bin/tor-browser
-bindsym $mod+F9 exec nordvpn c
-bindsym $mod+Shift+F9 exec nordvpn d
-bindsym $mod+F10 exec systemctl start nxserver.service
-bindsym $mod+F11 exec /usr/NX/bin/nxplayer
-bindsym $mod+F12 exec mousepad ~/.config/i3/config
+ #bindsym $mod+Shift+F9 exec nordvpn d
+ #bindsym $mod+F10 exec systemctl start nxserver.service
+ #bindsym $mod+F11 exec /usr/NX/bin/nxplayer
 
 #---WORKSPACES----
 
