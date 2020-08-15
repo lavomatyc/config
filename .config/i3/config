@@ -125,12 +125,23 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 #exec --no-startup-id blueman-manager
 exec --no-startup-id flameshot
-exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
 #exec_always nordvpn c
 exec --no-startup-id psensor
 
-#----PROGRAMS----
+#----WALLPAPERS-----------
+exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
+bindsym $mod+Ctrl+0 --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
+bindsym $mod+Ctrl+1 --bg-scale ~/Pictures/Wallpapers/wallpaper1.jpg
+bindsym $mod+Ctrl+2 --bg-scale ~/Pictures/Wallpapers/wallpaper2.jpg
+bindsym $mod+Ctrl+3 --bg-scale ~/Pictures/Wallpapers/wallpaper3.jpg
+bindsym $mod+Ctrl+4 --bg-scale ~/Pictures/Wallpapers/wallpaper4.jpg
+bindsym $mod+Ctrl+5 --bg-scale ~/Pictures/Wallpapers/wallpaper5.jpg
+bindsym $mod+Ctrl+6 --bg-scale ~/Pictures/Wallpapers/wallpaper6.jpg
+bindsym $mod+Ctrl+7 --bg-scale ~/Pictures/Wallpapers/wallpaper7.jpg
+bindsym $mod+Ctrl+8 --bg-scale ~/Pictures/Wallpapers/wallpaper8.jpg
+bindsym $mod+Ctrl+9 --bg-scale ~/Pictures/Wallpapers/wallpaper9.jpg
 
+#----PROGRAMS----
 # UTILITIES SHORTCUTS
 bindsym $mod+Shift+w exec rofi -show window
 bindsym $mod+w exec rofi -show run
