@@ -57,6 +57,7 @@ bindsym $mod+Shift+s exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl poweroff
 # lock
 bindsym $mod+Shift+v exec i3lock lock -i ~/Pictures/Wallpapers/wallpaper2.png --raw=1920x1080:rgb
+bindsym F9 exec i3lock lock -i ~/Pictures/Wallpapers/wallpaper2.png --raw=1920x1080:rgb
 
 #----INTRAWS----
 
