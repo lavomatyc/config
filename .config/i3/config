@@ -150,8 +150,8 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+g exec firefox
 bindsym $mod+v exec vimb
 bindsym $mod+Return exec $term
-bindsym $mod+space exec rofi -show run
-bindsym $mod+Shift+space exec $term
+bindsym $mod+space exec rofi -show combi
+bindsym $mod+Shift+space exec albert
 bindsym $mod+Shift+m exec vlc ~/Videos/mummi.MOV
 
 # FONCTION KEYS
