@@ -124,7 +124,8 @@ bindsym $mod+o resize grow width 10 px
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
-#exec --no-startup-id blueman-manager
+exec --no-startup-id blueman-manager
+exec --no-startup-id pavucontrol
 exec --no-startup-id flameshot
 #exec_always nordvpn c
 exec --no-startup-id psensor
