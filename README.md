@@ -49,3 +49,5 @@ config checkout
 
 config config --local status.showUntrackedFiles no
 
+config pull --set-upstream origin master
+
