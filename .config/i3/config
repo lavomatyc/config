@@ -190,6 +190,7 @@ bindsym $mod+Shift+agrave move container to workspace number $ws10
 
 #navigate between workspaces
 bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+twosuperior workspace prev
 bindsym $mod+Tab workspace next
 
 #SCRATCHPAD
