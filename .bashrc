@@ -140,14 +140,14 @@ ex ()
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/lavomatyc/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/matias/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/lavomatyc/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/lavomatyc/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/matias/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/matias/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/lavomatyc/anaconda3/bin:$PATH"
+        export PATH="/home/matias/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -161,8 +161,8 @@ alias cfg='config add && config commit -m "lenovo"'
 alias i3config='vim ~/.config/i3/config'
 
 #OVERLEAF GIT
-alias ondansetron='cd /home/lavomatyc/Documents/ArticleOndansetron && git pull --no-rebase && vim ondansetron.tex'
-alias overpush='cd /home/lavomatyc/Documents/ArticleOndansetron && git add *.tex && git commit -m "local work" && git push origin master'
+alias ondansetron='cd /home/matias/Documents/ArticleOndansetron && git pull --no-rebase && vim ondansetron.tex'
+alias overpush='cd /home/matias/Documents/ArticleOndansetron && git add *.tex && git commit -m "local work" && git push origin master'
 
 
 set -o vi
