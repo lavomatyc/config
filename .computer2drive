@@ -1,0 +1,5 @@
+#! /bin/sh
+rsync -a --info=progress2 /home/matias/Documents /home/matias/Media/home/matias/Documents
+rsync -a --info=progress2 /home/matias/Music /home/matias/Media/home/matias/Music
+rsync -a --info=progress2 /home/matias/Pictures /home/matias/Media/home/matias/Pictures
+rsync -a --info=progress2 /home/matias/Videos /home/matias/Media/home/matias/Videos
