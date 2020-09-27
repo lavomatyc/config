@@ -129,7 +129,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id psensor
 exec --no-startup-id pavucontrol
 exec --no-startup-id blueberry
-exec --no-startup-id $term -e ranger
+exec --no-startup-id $term -e neofetch
 
 #----WALLPAPERS-----------
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
