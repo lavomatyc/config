@@ -128,8 +128,9 @@ exec --no-startup-id flameshot
 #exec_always nordvpn c
 exec --no-startup-id psensor
 exec --no-startup-id pavucontrol
-exec --no-startup-id blueberry
+#exec --no-startup-id blueberry
 exec --no-startup-id $term -e neofetch
+exec --no-startup-id $term -e cmatrix -a
 
 #----WALLPAPERS-----------
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
@@ -154,7 +155,7 @@ bindsym $mod+v exec vimb
 bindsym $mod+Return exec $term
 bindsym $mod+space exec rofi -show combi
 bindsym $mod+Shift+space exec albert
-bindsym $mod+Shift+m exec vlc ~/Videos/mummi.MOV
+bindsym $mod+t exec ~/.joplin/Joplin.AppImage
 
 # FONCTION KEYS
 #bindsym $mod+F7 exec
