@@ -1,5 +1,8 @@
 #MANJARO i3
-
+#
+#
+#find key name: xorg-xev
+#
 #----DEFINITIONS----
 
 set $mod Mod4
@@ -72,10 +75,6 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -128,9 +127,9 @@ exec --no-startup-id flameshot
 #exec_always nordvpn c
 exec --no-startup-id psensor
 exec --no-startup-id pavucontrol
-#exec --no-startup-id blueberry
-exec --no-startup-id $term -e neofetch
-exec --no-startup-id $term -e cmatrix -a
+exec --no-startup-id blueberry
+#exec --no-startup-id $term -e neofetch
+#exec --no-startup-id $term -e cmatrix -a
 
 #----WALLPAPERS-----------
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg
@@ -154,7 +153,6 @@ bindsym $mod+g exec firefox
 bindsym $mod+v exec vimb
 bindsym $mod+Return exec $term
 bindsym $mod+space exec rofi -show combi
-bindsym $mod+Shift+space exec albert
 bindsym $mod+t exec ~/.joplin/Joplin.AppImage
 
 # FONCTION KEYS
@@ -193,6 +191,10 @@ bindsym $mod+Shift+agrave move container to workspace number $ws10
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+twosuperior workspace prev
 bindsym $mod+Tab workspace next
+bindsym $mod+Left workspace prev
+bindsym $mod+Right workspace next
+#bindsym $mod+Up
+#bindsym $mod+Down
 
 #SCRATCHPAD
 bindsym $mod+Shift+n move scratchpad
